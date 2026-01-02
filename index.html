@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flamingo Padel Club - Your Premier Padel Experience</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor">
+        <div class="cursor-ball"></div>
+    </div>
+
+    <!-- Sound Toggle -->
+    <button class="sound-toggle" id="soundToggle" aria-label="Toggle Sound">
+        <svg class="sound-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M11 5L6 9H2v6h4l5 4V5z" />
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" />
+        </svg>
+        <svg class="sound-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            style="display:none;">
+            <path d="M11 5L6 9H2v6h4l5 4V5z" />
+            <line x1="23" y1="9" x2="17" y2="15" />
+            <line x1="17" y1="9" x2="23" y2="15" />
+        </svg>
+    </button>
+
+    <!-- Language Switcher & Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25 5 C20 5 15 10 15 15 C15 20 18 25 25 35 C32 25 35 20 35 15 C35 10 30 5 25 5Z"
+                        fill="#FF007D" />
+                    <ellipse cx="25" cy="12" rx="3" ry="4" fill="#FFF0F0" />
+                    <circle cx="25" cy="42" r="6" fill="#698778" opacity="0.3" />
+                </svg>
+                <span class="logo-text">
+                    <span class="logo-flamingo">Flamingo</span>
+                    <span class="logo-padel">PADEL CLUB</span>
+                </span>
+            </div>
+
+            <div class="nav-links">
+                <a href="#home" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+                <a href="#about" class="nav-link" data-en="About" data-es="Acerca">About</a>
+                <a href="#courts" class="nav-link" data-en="Courts" data-es="Canchas">Courts</a>
+                <a href="#stories" class="nav-link" data-en="Stories" data-es="Historias">Stories</a>
+                <a href="#contact" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="es">ES</button>
+                </div>
+                <a href="book-court.html" class="btn btn-primary" data-en="Book a Court" data-es="Reservar Cancha">Book
+                    a Court</a>
+            </div>
+
+            <!-- HAMBURGER (MOBILE ONLY) -->
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Video -->
+    <section class="hero" id="home">
+        <div class="hero-video-container">
+            <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="bgimage.jpg">
+                <source src="bgvideo.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-badge" data-en="Premium Padel Experience" data-es="Experiencia Premium de Pádel">
+                Premium Padel Experience
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line" data-en="Elevate Your" data-es="Eleva Tu">Elevate Your</span>
+                <span class="title-line gradient-text morphing-text">
+                    <span class="morph-word active" data-en="Game" data-es="Juego">Game</span>
+                    <span class="morph-word" data-en="Passion" data-es="Pasión">Passion</span>
+                    <span class="morph-word" data-en="Community" data-es="Comunidad">Community</span>
+                    <span class="morph-word" data-en="Lifestyle" data-es="Estilo">Lifestyle</span>
+                </span>
+            </h1>
+            <p class="hero-subtitle" data-en="Where passion meets elegance on every court. Join Flamingo Padel Club."
+                data-es="Donde la pasión encuentra la elegancia en cada cancha. Únete a Flamingo Padel Club.">
+                Where passion meets elegance on every court. Join Flamingo Padel Club.
+            </p>
+
+            <div class="hero-cta">
+                <a href="book-court.html" class="btn btn-hero btn-primary glow-btn" data-en="Book a Court"
+                    data-es="Reservar Cancha">
+                    <span>Book a Court</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M7 3L14 10L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </a>
+                <a href="book-class.html" class="btn btn-hero btn-glass" data-en="Book a Class"
+                    data-es="Reservar Clase">
+                    <span>Book a Class</span>
+                </a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-value="400">0</div>
+                    <div class="stat-label" data-en="Growth Rate" data-es="Tasa de Crecimiento">Growth Rate</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number" data-value="40">0</div>
+                    <div class="stat-label" data-en="Women Players" data-es="Jugadoras">Women Players</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number" data-value="2000">0</div>
+                    <div class="stat-label" data-en="M² Facility" data-es="M² Instalación">M² Facility</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow-down"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" data-en="What We Offer" data-es="Qué Ofrecemos">What We Offer</span>
+                <h2 class="section-title" data-en="Your Complete Padel Experience"
+                    data-es="Tu Experiencia Completa de Pádel">
+                    Your Complete Padel Experience
+                </h2>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card modern-card">
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=800&h=600&fit=crop"
+                            alt="Premium Padel Court">
+                        <div class="feature-overlay"></div>
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-number">01</div>
+                        <h3 data-en="Premium Courts" data-es="Canchas Premium">Premium Courts</h3>
+                        <p data-en="Professional-grade glass courts with panoramic views and climate-controlled comfort"
+                            data-es="Canchas de vidrio profesional con vistas panorámicas y confort climatizado">
+                            Professional-grade glass courts with panoramic views and climate-controlled comfort
+                        </p>
+                        <a href="#courts" class="feature-link" data-en="Explore Courts →"
+                            data-es="Ver Canchas →">Explore Courts →</a>
+                    </div>
+                </div>
+
+                <div class="feature-card modern-card">
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1622163642998-1ea32b0bbc67?w=800&h=600&fit=crop"
+                            alt="Expert Coaching">
+                        <div class="feature-overlay"></div>
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-number">02</div>
+                        <h3 data-en="Expert Coaching" data-es="Entrenamiento Experto">Expert Coaching</h3>
+                        <p data-en="Certified professionals who transform beginners into competitors with personalized training"
+                            data-es="Profesionales certificados que transforman principiantes en competidores">
+                            Certified professionals who transform beginners into competitors with personalized training
+                        </p>
+                        <a href="book-class.html" class="feature-link" data-en="Book Training →"
+                            data-es="Reservar Clase →">Book Training →</a>
+                    </div>
+                </div>
+
+                <div class="feature-card modern-card">
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?w=800&h=600&fit=crop"
+                            alt="Vibrant Community">
+                        <div class="feature-overlay"></div>
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-number">03</div>
+                        <h3 data-en="Vibrant Community" data-es="Comunidad Vibrante">Vibrant Community</h3>
+                        <p data-en="Join tournaments, social events, and connect with passionate players who share your love for the game"
+                            data-es="Únete a torneos, eventos sociales y conecta con jugadores apasionados">
+                            Join tournaments, social events, and connect with passionate players who share your love for
+                            the game
+                        </p>
+                        <a href="#stories" class="feature-link" data-en="Meet Members →"
+                            data-es="Conocer Miembros →">Meet Members →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section: Map + Details (Horizontally split) -->
+    <section class="location-section" id="location">
+        <div class="location-container">
+            <div class="location-map">
+                <div class="map-card">
+                    <iframe class="map-embed" title="Flamingo Padel Club Location"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14938.906039912794!2d-100.329!3d20.672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d35b4b6f6c0c0f%3A0x0000000000000000!2sZakia%2C%20Zibat%C3%A1%2C%20Universidad%20An%C3%A1huac%20Quer%C3%A9taro!5e0!3m2!1sen!2smx!4v0000000000000"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="location-details">
+                <h2 class="section-title" data-en="Flamingo Padel Club" data-es="Flamingo Padel Club">Flamingo Padel
+                    Club</h2>
+                <p class="section-sub" data-en="Your new place to play" data-es="Tu nuevo punto de encuentro">Tu nuevo
+                    punto de encuentro</p>
+                <div class="location-chips">
+                    <span class="chip" data-en="High growth zone" data-es="Zona de alto crecimiento">Zona de alto
+                        crecimiento</span>
+                    <span class="chip" data-en="No nearby courts" data-es="Sin canchas cercanas">Sin canchas
+                        cercanas</span>
+                    <span class="chip" data-en="Main avenue access" data-es="Acceso por avenida principal">Acceso por
+                        avenida principal</span>
+                </div>
+                <div class="location-cta">
+                    <a href="book-court.html" class="btn cta" data-en="Book Court" data-es="Reservar Cancha">Reservar
+                        Cancha</a>
+                    <a href="book-class.html" class="btn cta secondary" data-en="Book Class"
+                        data-es="Reservar Clase">Reservar Clase</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section: Premium Court Features -->
+    <section class="facilities-section" id="courts">
+        <div class="container">
+            <h2 class="section-title" data-en="Premium Court Facilities" data-es="Instalaciones Premium">Instalaciones
+                Premium</h2>
+            <p class="section-sub" data-en="Designed for elegance, performance and comfort"
+                data-es="Diseñadas para elegancia, rendimiento y comodidad">Diseñadas para elegancia, rendimiento y
+                comodidad</p>
+            <div class="facilities-board">
+                <!-- 1: Image Tile - LED Court Lighting -->
+                <div class="facility-tile tile-image">
+                    <img class="facility-img"
+                        src="https://www.dreamstime.com/illuminated-indoor-padel-court-sleek-design-modern-aesthetics-blue-led-lighting-pro-sports-facility-offers-image394974420"
+                        alt="Iluminación LED">
+                    <div class="tile-overlay">
+                        <h3 data-en="LED Court Lighting" data-es="Iluminación LED">Iluminación LED</h3>
+                    </div>
+                </div>
+                <!-- 2: Info Tile - Reinforced Glass Walls -->
+                <div class="facility-tile tile-info">
+                    <div class="facility-icon">🟦</div>
+                    <h3 data-en="Reinforced Glass Walls" data-es="Paredes de cristal reforzado">Paredes de cristal
+                        reforzado</h3>
+                    <p data-en="Panoramic clarity with professional-grade safety"
+                        data-es="Claridad panorámica con seguridad de grado profesional">Claridad panorámica con
+                        seguridad de grado profesional</p>
+                </div>
+                <!-- 3: Image Tile - Climate Control -->
+                <div class="facility-tile tile-image">
+                    <img class="facility-img"
+                        src="https://www.facebook.com/VerdanaVillage/posts/-beat-the-heat-you-have-to-see-our-climate-controlled-4-indoor-pickleball-and-2-/762289922565629/"
+                        alt="Confort con control climático">
+                    <div class="tile-overlay">
+                        <h3 data-en="Climate-Control Comfort" data-es="Confort con control climático">Confort con
+                            control climático</h3>
+                    </div>
+                </div>
+                <!-- 4: Info Tile - Professional Synthetic Turf -->
+                <div class="facility-tile tile-info">
+                    <div class="facility-icon">🌿</div>
+                    <h3 data-en="Professional Synthetic Turf" data-es="Césped sintético profesional">Césped sintético
+                        profesional</h3>
+                    <p data-en="Optimal grip and ball response" data-es="Agarre óptimo y respuesta de pelota">Agarre
+                        óptimo y respuesta de pelota</p>
+                </div>
+                <!-- 5: Image Tile - Locker Rooms & Showers -->
+                <div class="facility-tile tile-image">
+                    <img class="facility-img"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVrDlBEi06KPAMHHJSpZWYEDQDkEmTkY808g&s"
+                        alt="Vestidores y regaderas">
+                    <div class="tile-overlay">
+                        <h3 data-en="Locker Rooms & Showers" data-es="Vestidores y regaderas">Vestidores y regaderas
+                        </h3>
+                    </div>
+                </div>
+                <!-- 6: Info Tile - Lounge & Café -->
+                <div class="facility-tile tile-info">
+                    <div class="facility-icon">☕</div>
+                    <h3 data-en="Lounge & Café" data-es="Lounge y café">Lounge y café</h3>
+                    <p data-en="Social space for community vibes" data-es="Espacio social con vibra de comunidad">
+                        Espacio social con vibra de comunidad</p>
+                </div>
+                <!-- 7: Image Tile - Parking & Security -->
+                <div class="facility-tile tile-image">
+                    <img class="facility-img" src="https://sentriforce.com/news/parking-lots-security-tips/"
+                        alt="Estacionamiento y seguridad">
+                    <div class="tile-overlay">
+                        <h3 data-en="On-site Parking & Security" data-es="Estacionamiento y seguridad">Estacionamiento y
+                            seguridad</h3>
+                    </div>
+                </div>
+                <!-- 8: Info Tile - Certified Coaching -->
+                <div class="facility-tile tile-info">
+                    <div class="facility-icon">🎾</div>
+                    <h3 data-en="Certified Coaching" data-es="Coaching certificado">Coaching certificado</h3>
+                    <p data-en="Beginner to advanced programs" data-es="Programas de principiante a avanzado">Programas
+                        de principiante a avanzado</p>
+                </div>
+            </div>
+            <div class="facilities-cta">
+                <a href="book-court.html" class="btn cta" data-en="Book Court" data-es="Reservar Cancha">Reservar
+                    Cancha</a>
+                <a href="book-class.html" class="btn cta secondary" data-en="Book Class"
+                    data-es="Reservar Clase">Reservar Clase</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Immersive Gallery Section -->
+    <section class="gallery-section">
+        <div class="container-fluid">
+            <div class="gallery-grid">
+                <div class="gallery-item large">
+                    <img src="https://images.unsplash.com/photo-1622547748225-3fc4abd2cca0?w=1200&h=800&fit=crop"
+                        alt="Padel Court">
+                    <div class="gallery-overlay">
+                        <h3 data-en="World-Class Facilities" data-es="Instalaciones de Clase Mundial">World-Class
+                            Facilities</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=600&h=600&fit=crop"
+                        alt="Padel Player">
+                    <div class="gallery-overlay">
+                        <h3 data-en="Pro Athletes" data-es="Atletas Pro">Pro Athletes</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1526406915894-7bcd65f60845?w=600&h=600&fit=crop"
+                        alt="Tournament">
+                    <div class="gallery-overlay">
+                        <h3 data-en="Tournaments" data-es="Torneos">Tournaments</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1521537634581-0dced2fee2ef?w=600&h=600&fit=crop"
+                        alt="Community">
+                    <div class="gallery-overlay">
+                        <h3 data-en="Community" data-es="Comunidad">Community</h3>
+                    </div>
+                </div>
+                <div class="gallery-item tall">
+                    <img src="https://images.unsplash.com/photo-1589487391730-58f20eb2c308?w=600&h=900&fit=crop"
+                        alt="Training">
+                    <div class="gallery-overlay">
+                        <h3 data-en="Elite Training" data-es="Entrenamiento Élite">Elite Training</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax Section -->
+    <section class="parallax-section">
+        <div class="parallax-bg"></div>
+        <div class="parallax-content">
+            <div class="parallax-text">
+                <h2 data-en="More Than Courts. A Lifestyle." data-es="Más Que Canchas. Un Estilo de Vida.">
+                    More Than Courts. A Lifestyle.
+                </h2>
+                <p data-en="Join a community where sport meets social connection, where every match strengthens friendships, and where passion for padel brings people together."
+                    data-es="Únete a una comunidad donde el deporte se encuentra con la conexión social, donde cada partido fortalece amistades.">
+                    Join a community where sport meets social connection, where every match strengthens friendships, and
+                    where passion for padel brings people together.
+                </p>
+                <a href="book-court.html" class="btn btn-large btn-glass-white" data-en="Join Our Community"
+                    data-es="Únete a Nuestra Comunidad">Join Our Community</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Feed Section -->
+    <section class="community-feed">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-label" data-en="Live Community" data-es="Comunidad en Vivo">Live Community</span>
+                <h2 class="section-title" data-en="Recent Matches & Activities"
+                    data-es="Partidos y Actividades Recientes">
+                    Recent Matches & Activities
+                </h2>
+            </div>
+
+            <div class="feed-container">
+                <div class="feed-item" data-delay="0">
+                    <div class="feed-avatar">
+                        <img src="https://i.pravatar.cc/100?img=11" alt="Player">
+                        <span class="feed-status online"></span>
+                    </div>
+                    <div class="feed-content">
+                        <div class="feed-header">
+                            <strong>María & Carlos</strong>
+                            <span class="feed-vs">vs</span>
+                            <strong>Diego & Ana</strong>
+                        </div>
+                        <p class="feed-text" data-en="Just finished an intense match on Court 2! 🔥"
+                            data-es="¡Acabamos de terminar un partido intenso en Cancha 2! 🔥">
+                            Just finished an intense match on Court 2! 🔥
+                        </p>
+                        <div class="feed-meta">
+                            <span class="feed-time">5 min ago</span>
+                            <span class="feed-score">6-4, 7-5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feed-item" data-delay="1">
+                    <div class="feed-avatar">
+                        <img src="https://i.pravatar.cc/100?img=23" alt="Player">
+                        <span class="feed-status online"></span>
+                    </div>
+                    <div class="feed-content">
+                        <div class="feed-header">
+                            <strong>Roberto</strong>
+                            <span class="feed-action" data-en="booked" data-es="reservó">booked</span>
+                        </div>
+                        <p class="feed-text" data-en="Advanced training session with Coach Martinez"
+                            data-es="Sesión de entrenamiento avanzado con Coach Martinez">
+                            Advanced training session with Coach Martinez
+                        </p>
+                        <div class="feed-meta">
+                            <span class="feed-time">12 min ago</span>
+                            <span class="feed-location">Court 1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feed-item" data-delay="2">
+                    <div class="feed-avatar">
+                        <img src="https://i.pravatar.cc/100?img=45" alt="Player">
+                        <span class="feed-status"></span>
+                    </div>
+                    <div class="feed-content">
+                        <div class="feed-header">
+                            <strong>Laura & Sofia</strong>
+                            <span class="feed-action" data-en="joined" data-es="se unieron">joined</span>
+                        </div>
+                        <p class="feed-text" data-en="Welcome to the Flamingo community! 🦩"
+                            data-es="¡Bienvenidas a la comunidad Flamingo! 🦩">
+                            Welcome to the Flamingo community! 🦩
+                        </p>
+                        <div class="feed-meta">
+                            <span class="feed-time">28 min ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feed-item" data-delay="3">
+                    <div class="feed-avatar">
+                        <img src="https://i.pravatar.cc/100?img=68" alt="Player">
+                        <span class="feed-status online"></span>
+                    </div>
+                    <div class="feed-content">
+                        <div class="feed-header">
+                            <strong>Tournament Alert</strong>
+                        </div>
+                        <p class="feed-text" data-en="Monthly doubles tournament this Saturday! Sign up now 🏆"
+                            data-es="¡Torneo mensual de dobles este sábado! Inscríbete ahora 🏆">
+                            Monthly doubles tournament this Saturday! Sign up now 🏆
+                        </p>
+                        <div class="feed-meta">
+                            <span class="feed-time">1 hour ago</span>
+                            <span class="feed-badge" data-en="16 players registered"
+                                data-es="16 jugadores registrados">16 players registered</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feed-stats">
+                <div class="stat-card">
+                    <div class="stat-value" id="activePlayers">127</div>
+                    <div class="stat-label" data-en="Active This Week" data-es="Activos Esta Semana">Active This Week
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="matchesToday">24</div>
+                    <div class="stat-label" data-en="Matches Today" data-es="Partidos Hoy">Matches Today</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="courtUtilization">89%</div>
+                    <div class="stat-label" data-en="Court Utilization" data-es="Utilización de Canchas">Court
+                        Utilization</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stories Section -->
+    <section class="stories" id="stories">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-label" data-en="Testimonials" data-es="Testimonios">Testimonials</span>
+                <h2 class="section-title" data-en="Game Changing Stories" data-es="Historias Que Cambian El Juego">
+                    Game Changing Stories
+                </h2>
+            </div>
+
+            <div class="stories-carousel">
+                <div class="story-card glass-card">
+                    <div class="story-header">
+                        <img src="https://i.pravatar.cc/150?img=12" alt="José María" class="story-avatar">
+                        <div class="story-meta">
+                            <h4>José María</h4>
+                            <p data-en="Flamingo • Regular Member" data-es="Flamingo • Miembro Regular">Flamingo •
+                                Regular Member</p>
+                        </div>
+                        <div class="quote-mark">"</div>
+                    </div>
+                    <p class="story-text"
+                        data-en="Flamingo isn't just about padel—it's where I found my second family. Every game brings new energy and connections that last beyond the court. The coaching has transformed my game completely."
+                        data-es="Flamingo no es solo pádel—es donde encontré mi segunda familia. Cada juego trae nueva energía y conexiones que duran más allá de la cancha.">
+                        Flamingo isn't just about padel—it's where I found my second family. Every game brings new
+                        energy and connections that last beyond the court. The coaching has transformed my game
+                        completely.
+                    </p>
+                    <div class="story-rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                </div>
+
+                <div class="story-card glass-card">
+                    <div class="story-header">
+                        <img src="https://i.pravatar.cc/150?img=5" alt="Ana Laura" class="story-avatar">
+                        <div class="story-meta">
+                            <h4>Ana Laura</h4>
+                            <p data-en="Flamingo • Pro Player" data-es="Flamingo • Jugadora Pro">Flamingo • Pro Player
+                            </p>
+                        </div>
+                        <div class="quote-mark">"</div>
+                    </div>
+                    <p class="story-text"
+                        data-en="As a busy professional, I needed a place where I could disconnect and recharge. Flamingo gave me that and so much more—a community of like-minded people who push me to be better every day."
+                        data-es="Como profesional ocupada, necesitaba un lugar donde desconectar y recargar. Flamingo me dio eso y mucho más—una comunidad de personas afines.">
+                        As a busy professional, I needed a place where I could disconnect and recharge. Flamingo gave me
+                        that and so much more—a community of like-minded people who push me to be better every day.
+                    </p>
+                    <div class="story-rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                </div>
+
+                <div class="story-card glass-card">
+                    <div class="story-header">
+                        <img src="https://i.pravatar.cc/150?img=33" alt="Carlos Ramón" class="story-avatar">
+                        <div class="story-meta">
+                            <h4>Carlos Ramón</h4>
+                            <p data-en="Querétaro • Tournament Winner" data-es="Querétaro • Ganador de Torneo">Querétaro
+                                • Tournament Winner</p>
+                        </div>
+                        <div class="quote-mark">"</div>
+                    </div>
+                    <p class="story-text"
+                        data-en="From beginner to competitor in just 6 months. The coaching at Flamingo is world-class and the facilities are unmatched. This is where champions are made."
+                        data-es="De principiante a competidor en solo 6 meses. El entrenamiento en Flamingo es de clase mundial y las instalaciones son inigualables.">
+                        From beginner to competitor in just 6 months. The coaching at Flamingo is world-class and the
+                        facilities are unmatched. This is where champions are made.
+                    </p>
+                    <div class="story-rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-en="Ready to Elevate Your Game?" data-es="¿Listo Para Elevar Tu Juego?">
+                    Ready to Elevate Your Game?
+                </h2>
+                <p data-en="Join the Flamingo community today and experience padel like never before"
+                    data-es="Únete a la comunidad Flamingo hoy y experimenta el pádel como nunca antes">
+                    Join the Flamingo community today and experience padel like never before
+                </p>
+                <div class="cta-buttons">
+                    <a href="book-court.html" class="btn btn-large btn-primary" data-en="Book a Court Now"
+                        data-es="Reservar Cancha Ahora">Book a Court Now</a>
+                    <a href="book-class.html" class="btn btn-large btn-outline" data-en="Start Your First Class"
+                        data-es="Comenzar Tu Primera Clase">Start Your First Class</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <svg class="logo-icon" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25 5 C20 5 15 10 15 15 C15 20 18 25 25 35 C32 25 35 20 35 15 C35 10 30 5 25 5Z"
+                                fill="#FF007D" />
+                            <ellipse cx="25" cy="12" rx="3" ry="4" fill="#FFF0F0" />
+                            <circle cx="25" cy="42" r="6" fill="#698778" opacity="0.3" />
+                        </svg>
+                        <span class="logo-text">
+                            <span class="logo-flamingo">Flamingo</span>
+                            <span class="logo-padel">PADEL CLUB</span>
+                        </span>
+                    </div>
+                    <p class="footer-tagline" data-en="Elevating the padel experience"
+                        data-es="Elevando la experiencia del pádel">
+                        Elevating the padel experience
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h4 data-en="Quick Links" data-es="Enlaces Rápidos">Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" data-en="Home" data-es="Inicio">Home</a></li>
+                        <li><a href="#about" data-en="About Us" data-es="Acerca de Nosotros">About Us</a></li>
+                        <li><a href="book-court.html" data-en="Book a Court" data-es="Reservar Cancha">Book a Court</a>
+                        </li>
+                        <li><a href="book-class.html" data-en="Book a Class" data-es="Reservar Clase">Book a Class</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 data-en="Location" data-es="Ubicación">Location</h4>
+                    <p data-en="East Querétaro<br>Near Zakia, Zibatá & Universidad Anáhuac"
+                        data-es="Zona Este de Querétaro<br>Cerca de Zakia, Zibatá y Universidad Anáhuac">
+                        East Querétaro<br>
+                        Near Zakia, Zibatá & Universidad Anáhuac
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h4 data-en="Contact" data-es="Contacto">Contact</h4>
+                    <p>
+                        📞 55 1008 3910<br>
+                        📞 55 3677 9205<br>
+                        📧 hola@flamingopadelclub.com
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2024 Flamingo Padel Club. <span data-en="All Rights Reserved"
+                        data-es="Todos los Derechos Reservados">All Rights Reserved</span></p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="Facebook">👥</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

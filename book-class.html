@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Class - Flamingo Padel Club</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="booking.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Language Switcher & Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <svg class="logo-icon" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25 5 C20 5 15 10 15 15 C15 20 18 25 25 35 C32 25 35 20 35 15 C35 10 30 5 25 5Z" fill="#FF007D"/>
+                    <ellipse cx="25" cy="12" rx="3" ry="4" fill="#FFF0F0"/>
+                    <circle cx="25" cy="42" r="6" fill="#698778" opacity="0.3"/>
+                </svg>
+                <span class="logo-text">
+                    <span class="logo-flamingo">Flamingo</span>
+                    <span class="logo-padel">PADEL CLUB</span>
+                </span>
+            </a>
+            
+            <div class="nav-actions">
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="es">ES</button>
+                </div>
+                <a href="index.html" class="btn btn-outline" data-en="Go Back Home" data-es="Volver al Inicio">Go Back Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Booking Section -->
+    <section class="booking-hero">
+        <div class="booking-container">
+            <div class="booking-content">
+                <div class="booking-icon coaching">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="30" r="12" fill="#FF007D"/>
+                        <path d="M35 50 Q50 45 65 50 L65 70 Q50 75 35 70 Z" fill="#698778" opacity="0.3"/>
+                        <rect x="45" y="37" width="10" height="15" fill="#F5AFAF"/>
+                        <circle cx="30" cy="65" r="8" fill="#FF007D" opacity="0.5"/>
+                        <line x1="30" y1="73" x2="30" y2="85" stroke="#698778" stroke-width="3"/>
+                        <line x1="25" y1="80" x2="35" y2="80" stroke="#698778" stroke-width="3"/>
+                        <path d="M 70 60 L 75 55 L 80 60 L 85 55" stroke="#FF007D" stroke-width="2" fill="none"/>
+                    </svg>
+                </div>
+                
+                <h1 data-en="Book Your Class" data-es="Reserva Tu Clase">Book Your Class</h1>
+                <p class="booking-subtitle" data-en="Select your preferred training session" data-es="Selecciona tu sesión de entrenamiento preferida">
+                    Select your preferred training session
+                </p>
+                
+                <div class="coming-soon-card">
+                    <div class="coming-soon-icon">🏆</div>
+                    <h2 data-en="Coming Soon" data-es="Próximamente">Coming Soon</h2>
+                    <p data-en="We're working hard to bring you the best booking experience" data-es="Estamos trabajando duro para brindarte la mejor experiencia de reserva">
+                        We're working hard to bring you the best booking experience
+                    </p>
+                    
+                    <div class="class-types">
+                        <div class="class-type-card">
+                            <div class="class-icon">🎯</div>
+                            <h3 data-en="Beginner Classes" data-es="Clases Principiantes">Beginner Classes</h3>
+                            <p data-en="Perfect for those just starting their padel journey" data-es="Perfecto para quienes comienzan su viaje en pádel">
+                                Perfect for those just starting their padel journey
+                            </p>
+                        </div>
+                        
+                        <div class="class-type-card">
+                            <div class="class-icon">⚡</div>
+                            <h3 data-en="Intermediate Training" data-es="Entrenamiento Intermedio">Intermediate Training</h3>
+                            <p data-en="Take your skills to the next level" data-es="Lleva tus habilidades al siguiente nivel">
+                                Take your skills to the next level
+                            </p>
+                        </div>
+                        
+                        <div class="class-type-card">
+                            <div class="class-icon">🏅</div>
+                            <h3 data-en="Advanced Coaching" data-es="Entrenamiento Avanzado">Advanced Coaching</h3>
+                            <p data-en="Elite training for competitive players" data-es="Entrenamiento élite para jugadores competitivos">
+                                Elite training for competitive players
+                            </p>
+                        </div>
+                        
+                        <div class="class-type-card">
+                            <div class="class-icon">👥</div>
+                            <h3 data-en="Group Sessions" data-es="Sesiones Grupales">Group Sessions</h3>
+                            <p data-en="Learn and play with fellow enthusiasts" data-es="Aprende y juega con otros entusiastas">
+                                Learn and play with fellow enthusiasts
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <p data-en="For immediate class bookings, please contact us:" data-es="Para reservar clases inmediatamente, contáctanos:">
+                            For immediate class bookings, please contact us:
+                        </p>
+                        <div class="contact-details">
+                            <a href="tel:5510083910">📞 55 1008 3910</a>
+                            <a href="tel:5536779205">📞 55 3677 9205</a>
+                            <a href="mailto:hola@flamingopadelclub.com">📧 hola@flamingopadelclub.com</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="index.html" class="btn btn-primary btn-large" data-en="Return to Home" data-es="Volver al Inicio">Return to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
