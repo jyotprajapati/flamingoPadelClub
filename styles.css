@@ -307,12 +307,14 @@ body {
 .hero {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     overflow: hidden;
     padding-top: 150px;
     overflow: visible;
     padding-top: clamp(120px, 18vh, 180px);
     /* navbar height + breathing room */
+    display: inline-block;
+    align-items: stretch;
 
 }
 
@@ -325,12 +327,15 @@ body {
     height: 100%;
     overflow: hidden;
     z-index: 0;
+    object-fit: cover;
+    height: 100%;
+    flex: 1;
 }
 
 /* The video itself */
 .hero-video {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     min-width: 100%;
     min-height: 100%;
@@ -339,7 +344,9 @@ body {
     transform: translate(-50%, -50%);
     object-fit: cover;
     /* cover whole area */
-    z-index: -1;
+    z-index: 0;
+    object-fit: cover;
+    height: 100%;
 }
 
 /* Overlay if you want darkening or gradient */
@@ -354,6 +361,7 @@ body {
     z-index: 1;
 }
 
+
 /* Hero content */
 .hero-content {
     position: relative;
@@ -367,7 +375,6 @@ body {
     color: #fff;
     z-index: 2;
 }
-
 
 @keyframes gradientShift {
 
@@ -439,7 +446,7 @@ body {
 .hero-subtitle {
     font-size: clamp(1.1rem, 2vw, 1.4rem);
     color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -595,8 +602,8 @@ body {
    ============================================ */
 
 .features {
-    padding-top: 12rem;
-    padding-bottom: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 0rem;
     background: #0a0a0a;
     position: relative;
 }
@@ -1470,7 +1477,7 @@ button:hover~.custom-cursor .cursor-ball {
 
 .location-section {
     background: linear-gradient(180deg, #0a0a0a, #000000);
-    padding: 6rem 0;
+    padding: 2rem 0;
 }
 
 .location-container {
@@ -2060,10 +2067,10 @@ button:hover~.custom-cursor .cursor-ball {
         z-index: 10000;
     }
 
-    /* 
+
     .hero {
         padding-top: calc(10px + env(safe-area-inset-top));
-    } */
+    }
 
 
     .hero-stats {
